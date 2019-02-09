@@ -1,2 +1,1 @@
-# Discord Bot Hosting
-https://securesrv.io
+# Red-DiscordBot Docker
