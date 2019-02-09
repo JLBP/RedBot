@@ -17,7 +17,7 @@ ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 ENV TZ=America/New_York
 
-    # Python3 & Dependencies
+    # Python3 & Bot Dependencies
 RUN apt -y install python3.7 python3-pip python2.7 python-pip python3.7-dev python3.7-venv libffi-dev mono-complete build-essential \
     && libssl-dev libffi-dev git unzip default-jre \
     && pip3 install aiohttp websockets pynacl opuslib libopus0 \
