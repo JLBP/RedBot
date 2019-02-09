@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-MAINTAINER Thien Tran, <thientran@securesrv.io>
+MAINTAINER JaL, <jack@jalbp.xyz>
 
 RUN apt update \
     && apt upgrade -y \
@@ -14,10 +14,10 @@ RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 ENV TZ=America/New_York
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
     # Python3 & Dependencies
-RUN apt -y install python3.7 python3-pip python2.7 python-pip libffi-dev mono-complete \
+RUN apt -y install python3.7 python3-pip python2.7 python-pip python3.7-dev python3.7-venv libffi-dev mono-complete build-essential \
+	libssl-dev libffi-dev git unzip default-jre \
     && pip3 install aiohttp websockets pynacl opuslib libopus0 \
     && python3 -m pip install -U discord.py[voice]
 
