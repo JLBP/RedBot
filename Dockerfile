@@ -2,6 +2,8 @@ FROM ubuntu:18.04
 
 MAINTAINER JaL, <jack@jalbp.xyz>
 
+ARG DEBIAN_FRONTEND=noninteractive
+
 RUN apt update \
     && apt upgrade -y \
     && apt autoremove -y \
